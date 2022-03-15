@@ -36,6 +36,7 @@ def turn_left():
   if d == -1:
     d = 3
 
+array[x][y] = 2
 cnt = 1
 turn_time = 0
 
@@ -45,20 +46,19 @@ while True:
   ny = y + dir[d][1]
   if array[nx][ny] == 0:
     array[nx][ny] = 2
+    turn_time = 0
     cnt += 1
     x, y = nx, ny
-    turn_time = 0
     continue
   else:
     turn_time += 1
-    turn_left()
   if turn_time == 4:
     nx = x - dir[d][0]
     ny = y - dir[d][1]
     if array[nx][ny] == 1:
       break
-    x, y = nx, ny
+    else:
+      x, y = nx, ny
     turn_time = 0
-
 
 print(cnt)
