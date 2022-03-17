@@ -10,9 +10,3 @@
     [output]
       1. 승자 출력
 '''
-import random
-
-n = int(input())
-
-array = []
-myturn = True
