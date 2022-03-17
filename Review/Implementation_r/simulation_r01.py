@@ -24,7 +24,7 @@ for m in moves:
     if m == plan[i]:
       nx = x + steps[i][0]
       ny = y + steps[i][1]
-  if nx < 0 or ny < 0 or nx > n or ny > n:
+  if nx < 1 or ny < 1 or nx > n or ny > n:
     continue
   x, y = nx, ny
   
