@@ -9,7 +9,7 @@ from collections import deque
 
 def bfs(graph, start, visited):
   q = deque([start])
-  visited[start]
+  visited[start] = True
   while q:
     n = q.popleft()
     print(n, end=' ')
